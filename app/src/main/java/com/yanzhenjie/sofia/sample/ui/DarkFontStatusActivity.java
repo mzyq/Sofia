@@ -42,7 +42,7 @@ public class DarkFontStatusActivity extends AppCompatActivity {
 
         Sofia.with(this)
                 .statusBarDarkFont()
-                .statusBarBackground(ContextCompat.getColor(this, R.color.white))
+//                .statusBarBackground(ContextCompat.getColor(this, R.color.white))
                 .navigationBarBackground(ContextCompat.getColor(this, R.color.colorNavigation));
     }
 }

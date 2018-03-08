@@ -75,9 +75,20 @@ class HostLayout extends RelativeLayout implements Bar {
         contentLayout.addView(this);
     }
 
+    /**
+     * 设置状态栏深色图标
+     * 判断系统是否支持深色图标
+     * 如果不支持，设置状态栏灰色背景
+     *
+     * @return
+     */
     @Override
     public Bar statusBarDarkFont() {
-        Utils.setStatusBarDarkFont(mActivity, true);
+        if (OsUtils.isSupportStatusBarDarkFont()) {
+            Utils.setStatusBarDarkFont(mActivity, true);
+        } else {
+            statusBarBackground(Color.parseColor("#aaaaaa"));
+        }
         return this;
     }
 
